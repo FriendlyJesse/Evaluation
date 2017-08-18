@@ -20,11 +20,47 @@
 <body>
     <div id="index">
         <header class="search">
-            <form>
-                <input class="search_box" type="search" name="search" placeholder="请搜索您需要评价的商家" /><input class="search_submit" type="submit" value="搜索" />
+            <form action="#">
+                <div class="area">
+                    <select class="search_area">
+                        <option>杭州</option>
+                        <option>上海</option>
+                    </select>
+                    <img src="public/images/icon/under.png" />
+                </div>
+                <div class="wrap">
+                    <input class="search_box" type="search" name="search" placeholder="请搜索您需要评价的商家" />
+                    <img src="public/images/icon/search.png" />
+                </div>
+                <div class="sm">
+                    <img src="public/images/icon/sm.png" />
+                    扫码
+                </div>
+                <!--<input class="search_submit" type="submit" value="搜索" />-->
+                <!--<button type="submit" class="search_submit"><img src="public/images/icon/search.png" /></button>-->
             </form>
         </header>
-        <nav class="swiper-container">
+        <div class="swiper-container banner">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <a href="#">
+                        <img src="public/images/banner/banner_01.gif" />
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#">
+                        <img src="public/images/banner/banner_02.gif" />
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#">
+                        <img src="public/images/banner/banner_03.gif" />
+                    </a>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+        <nav class="swiper-container tab">
             <div class="swiper-wrapper">
                 <div class="swiper-slide" v-for="item in types" :class="{selected: item.type == active}" @click="active = item.type">{{item.name}}</div>
             </div>
@@ -108,7 +144,12 @@
             mounted: function ()
             {
                 // 初始化 swiper
-                var swiper = new Swiper('.swiper-container',
+                var banner = new Swiper('.banner',
+                {
+                    autoplay: 3000,
+                    pagination : '.swiper-pagination'
+                });
+                var tab = new Swiper('.tab',
                 {
                     slidesPerView: 5
                 });
