@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>剪刀理发店</title>
+    <link href="public/scss/app.css" rel="stylesheet" />
+    <!--vue-->
+    <script src="public/js/vue.js"></script>
+</head>
+<body style="background: #f4f4f4">
+    <div id="shop">
+        <nav class="nav">
+            <div class="nav_evaluation" :class="{selected: active}" @click="active = true">评价</div>
+            <div class="nav_details" :class="{selected: !active}" @click="active = false">详情</div>
+        </nav>
+        <section class="evaluation" v-if="active">
+            <div class="evaluation_quantity">
+                <span class="evaluation_quantity_number">28</span> 人进行过评价
+            </div>
+            <form>
+                <div class="evaluation_content">
+                    <h4 class="evaluation_content_title">评价内容 :</h4>
+                    <div class="evaluation_content_wrap">
+                            <div class="evaluation_content_wrap_row">
+                                <input id="good" type="checkbox" />
+                                <label for="good"></label>好评
+                            </div>
+                            <div class="evaluation_content_wrap_row">
+                                <input id="problem" type="checkbox" />
+                                <label for="problem"></label>存在的问题
+                                <ul>
+                                    <li>
+                                        <div class="left">
+                                            <input id="1" type="checkbox" />
+                                            <label for="1"></label>
+                                        </div>
+                                        <div class="right">
+                                            (1)无有效《公共场所卫生许可证》或卫生许可证过期未延续。
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="left">
+                                            <input id="1" type="checkbox" />
+                                            <label for="1"></label>
+                                        </div>
+                                        <div class="right">
+                                            (1)无有效《公共场所卫生许可证》或卫生许可证过期未延续。
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="left">
+                                            <input id="1" type="checkbox" />
+                                            <label for="1"></label>
+                                        </div>
+                                        <div class="right">
+                                            (1)无有效《公共场所卫生许可证》或卫生许可证过期未延续。
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                    </div>
+                </div>
+                <div class="evaluation_footer">
+                    提交评价
+                </div>
+            </form>
+        </section>
+        <section class="details" v-else>
+            <div class="details_wrap">
+                <ul>
+                    <li>
+                        <img src="public/images/icon/icon_5.jpg">经营地址 : 杭州市西湖区西河下路35-2号
+                    </li>
+                    <li>
+                        <img src="public/images/icon/icon_6.jpg">责任人/法人 : 谭爱爱
+                    </li>
+                </ul>
+            </div>
+
+            <div class="details_wrap">
+                <ul>
+                    <li>
+                        <img src="public/images/icon/icon_7.jpg">经营类别 : 理发美容场所——理发店
+                    </li>
+                    <li>
+                        <img src="public/images/icon/icon_8.jpg">经营面积 : 60
+                    </li>
+                </ul>
+            </div>
+
+            <div class="details_wrap">
+                <ul>
+                    <li>
+                        <img src="public/images/icon/icon_9.jpg">卫生许可证号 : 14552896222
+                    </li>
+                    <li>
+                        <img src="public/images/icon/icon_1.jpg">发证日期 : 2016-06-20
+                    </li>
+                    <li>
+                        <img src="public/images/icon/icon_2.jpg">许可证有效日期 : 2016-08-02
+                    </li>
+                </ul>
+            </div>
+
+            <div class="details_wrap">
+                <ul>
+                    <li>
+                        <img src="public/images/icon/icon_3.jpg">工商执照号码 : 331026170016987
+                    </li>
+                    <li>
+                        <img src="public/images/icon/icon_4.jpg">工商执照有效日期 : 2016-06-20
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        new Vue
+        ({
+            el: '#shop',
+            data:
+            {
+                active: true
+            }
+        })
+    </script>
+</body>
+</html>

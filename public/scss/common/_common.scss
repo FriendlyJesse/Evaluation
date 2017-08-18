@@ -1,0 +1,28 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: '微软雅黑';
+}
+
+
+@mixin frame($default: '', $active: '', $type: 'checkbox')
+{
+    input[type = #{$type}]
+    {
+        display: none;
+
+        & + label
+        {
+            display: inline-block;
+            width: 21px;
+            height: 21px;
+            background: url("../images/#{$default}.png") no-repeat center center / 100% 100%;
+        }
+        &:checked + label
+        {
+            background-image: url("../images/#{$active}.png");
+        }
+    }
+}

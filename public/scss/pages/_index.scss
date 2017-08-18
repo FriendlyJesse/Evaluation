@@ -1,0 +1,87 @@
+.swiper-container
+{
+    background: #fafafa;
+    height: 44px;
+    border-bottom: 1px solid #dbdbdb;
+
+    .swiper-slide
+    {
+        text-align: center;
+        line-height: 44px;
+        font-size: 14px;
+        height: auto;
+
+        &.selected
+        {
+            color: $theme;
+            border-bottom: 2px solid $theme;
+        }
+    }
+}
+.search
+{
+    padding: 20px;
+    background: #fafafa;
+
+    form
+    {
+        display: flex;
+        justify-content: center;
+    }
+    &_box
+    {
+        width: 70%;
+        height: 30px;
+        border-radius: 20px;
+        border: 1px solid $theme;
+        float: left;
+        margin-right: 10px;
+        text-indent: 20px;
+
+        &:focus
+        {
+            outline: none;
+        }
+    }
+    &_submit
+    {
+        border: none;
+        background: none;
+        color: $theme;
+        text-decoration: underline;
+        font-size: 14px;
+    }
+}
+.shop
+{
+    &_list
+    {
+        a
+        {
+            display: block;
+            color: #000;
+            text-decoration: none;
+            padding: 20px;
+            border-bottom: 1px solid #e1e1e1;
+        }
+    }
+    &_title
+    {
+        margin-bottom: 10px;
+    }
+    &_evaluation
+    {
+        font-size: 14px;
+        color: #9b9b9b;
+        overflow: hidden;
+
+        &_number
+        {
+            color: $theme;
+        }
+        &_distance
+        {
+            float: right;
+        }
+    }
+}
