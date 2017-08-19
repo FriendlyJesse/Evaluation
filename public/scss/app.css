@@ -29,7 +29,7 @@
 .search {
   padding: 20px;
   background: transparent;
-  position: fixed;
+  position: absolute;
   top: 0;
   width: 100%;
   z-index: 999; }
@@ -89,7 +89,7 @@
   display: block;
   color: #000;
   text-decoration: none;
-  padding: 20px;
+  padding: 10px 20px;
   border-bottom: 1px solid #e1e1e1; }
 .shop_title {
   margin-bottom: 10px; }
